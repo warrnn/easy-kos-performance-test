@@ -5,7 +5,7 @@ import re
 class BaseUser(HttpUser):
     abstract = True
     host = "http://127.0.0.1:8000"
-    # wait_time = between(1, 3)
+    wait_time = between(1, 3)
 
     username = None
     password = None
@@ -36,7 +36,7 @@ class BaseUser(HttpUser):
 
 
 class AdminUser(BaseUser):
-    # weight = 1
+    weight = 1
     username = "admin"
     password = "admin"
 
@@ -50,7 +50,7 @@ class AdminUser(BaseUser):
 
 
 class PemilikUser(BaseUser):
-    # weight = 2
+    weight = 2
     username = "adit"
     password = "1234"
 
@@ -64,7 +64,7 @@ class PemilikUser(BaseUser):
 
 
 class PenghuniUser(BaseUser):
-    # weight = 5
+    weight = 5
     username = "budi"
     password = "1234"
 
